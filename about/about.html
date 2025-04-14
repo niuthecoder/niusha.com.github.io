@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="../css/about.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var accButton = document.querySelector('.accordion-button');
+        accButton.addEventListener('click', function () {
+            var content = this.nextElementSibling;
+            var icon = this.querySelector('.accordion-icon');
+
+            // Toggle the display of the content
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                icon.innerHTML = '&#x25BC;'; // Down arrow
+            } else {
+                content.style.display = 'block';
+                icon.innerHTML = '&#x25B2;'; // Up arrow
+            }
+
+            // Toggle active class
+            this.classList.toggle('active');
+        });
+    });
+</script>
+
+
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="../about/about.html">About</a></li>
+                <li><a href="../art/art.html">Art</a></li>
+                <li><a href="../photos/photos.html">Photos</a></li>
+                <li><a href="../projects/projects.html">Projects</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="../imgs/anar.webp" alt="Logo">
+        </div>
+    </header>
+
+    <div class="h1_about">
+        <div class="icons-container">
+        <img src="../imgs/BEE_T.png" alt="BEE_T" class="icon left-icon">
+        <h1>About</h1>
+        <img src="../imgs/SUN_T.png" alt="SUN_T" class="icon right-icon">
+    </div>
+    </div>
+   
+    <div class="pic1">
+        <img src="../imgs/nono.jpeg" alt="pic1">
+    </div>
+
+    
+
+    <div class="text_underpic">
+        <p><small>july 2024</small></p>
+    </div>
+
+<div class="about-intro">
+    <p>Hi! My name is Niusha & I'm a forth-year university student majoring in Computer engineering 
+        . This website is my creative portfolio filled with all the beautiful things, people, places
+        &
+        memories I love. Hope you love it too!</p>
+</div>
+
+<div class="accordion">
+
+    <button class="accordion-button">
+        More Info <span class="accordion-icon">&#x25BC;</span>
+    </button>
+    
+    <div class="accordion-content">
+    <div class="info_item">
+        <ul>
+            <li><strong>Sign:</strong> Cancer</li>
+            <li><strong>MBTI:</strong> INFJ</li>
+            <li><strong>Blood type:</strong> B+</li>
+            <li><strong>House:</strong> Hufflepuff </li>
+            <li><strong>Clan:</strong> Gryffindor </li>
+        </ul>
+    </div>
+   </div>
+</div>
+
+<div class="contact">
+    <a href="../contact/contact.html">Contact</a>
+</div>
+</div>
+
+    <footer>
+        <p>&copy; 25 July 2024, niusha.</p>
+    </footer>
+
+</body>
+
+</html>
+
+

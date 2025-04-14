@@ -1,0 +1,188 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    background-color: #f3e8de;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    font-family: 'Lora', serif;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 190px;
+    padding-top: 50px;
+    text-align: left;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.h1_Art{
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 70px;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+
+}
+
+.logo img {
+    height: 60px;
+}
+
+.pic-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.pic-gallery .p{
+font-family: 'Lora', serif;
+}
+.pic {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text_in_pic {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+.contact {
+    text-align: center;
+    font-family: 'Lora', serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.contact a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-top: auto;
+
+}
+
+@media (max-width: 1500px) {
+    nav ul {
+        padding-left: 20px;
+        padding-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    nav ul {
+        padding-left: 10px;
+        padding-top: 8px;
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 5px;
+        margin-bottom: 4px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        padding-left: 10px;
+        padding-top: 8px;
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 5px;
+        margin-bottom: 2px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+}

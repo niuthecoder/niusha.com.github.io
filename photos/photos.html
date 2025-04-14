@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <link rel="stylesheet" href="../css/photos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<script>
+    function filterPhotos(category) {
+            const items = document.querySelectorAll('.photo-item');
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.classList.contains(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+</script>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="../about/about.html">About</a></li>
+                <li><a href="../art/art.html">Art</a></li>
+                <li><a href="../photos/photos.html">Photos</a></li>
+                <li><a href="../projects/projects.html">Projects</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="../imgs/anar.webp" alt="Logo">
+        </div>
+    </header>
+
+    <div class="h1_photo">
+        <h1>Photos</h1>
+    </div>
+
+    <div class="filter-buttons">
+        <button onclick="filterPhotos('all')">All</button>
+        <button onclick="filterPhotos('june')">june </button>
+        <button onclick="filterPhotos('iran')">iran</button>
+        <button onclick="filterPhotos('evening')">Evenings</button>
+    </div>
+
+    <div class="photo-gallery">
+        <div class="photo-item june">
+            <img src="morning1.jpg" alt="june Photo 1">
+            <div class="photo-description">june Photo 1</div>
+        </div>
+        <div class="photo-item iran">
+            <img src="afternoon1.jpg" alt="iran Photo 1">
+            <div class="photo-description">iran Photo 1</div>
+        </div>
+        <div class="photo-item evening">
+            <img src="evening1.jpg" alt="Evenings Photo 1">
+            <div class="photo-description">Evenings Photo 1</div>
+        </div>
+        <div class="photo-item june">
+            <img src="morning2.jpg" alt="june Photo 2">
+            <div class="photo-description">june Photo 2</div>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 25 July 2024, Niusha.</p>
+    </footer>
+
+    <script src="photos.js"></script>
+</body>
+
+</html>

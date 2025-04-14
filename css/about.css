@@ -1,0 +1,340 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    background-color: #f3e8de;
+    overflow-x: hidden;
+}
+header {
+    position: relative;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    font-family: 'Lora', serif;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 190px;
+    padding-top: 50px;
+    text-align: left;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+.h1_about{
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: 'Lora', serif;
+        text-align: center;
+        font-size:25px ;
+        margin-bottom: 70px;
+}
+.icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 90px;
+   
+    height: 90px;
+   
+    margin: 0 25px;
+    
+}
+
+.left-icon {
+    margin-right: 35px;
+}
+
+.right-icon {
+    margin-left: 35px;
+}
+.text_underpic{
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: 'Lora', serif;
+        text-align: center;
+        margin-bottom: 0px;
+        
+}
+.pic1 {
+   
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow: hidden;
+}
+.pic1 img {
+    width: 100%;
+    height: auto;
+   
+}
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+
+}
+
+.logo img {
+    height: 60px;
+}
+
+.about-intro {
+        padding: 80px;
+        max-width: 920px;
+        margin: 0 auto;
+        font-family: 'Lora', serif;
+        text-align: center;
+        font-size: 1em;
+        line-height: 1.7;
+        margin-bottom: 5px;
+}
+
+.info_item {
+   
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'Lora', serif;
+    text-align: left;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.info_item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info_item li {
+    margin-bottom: 20px;
+}
+
+.contact {
+        text-align: center;
+        font-family: 'Lora', serif;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+}
+.contact a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight:lighter;
+}
+.contact a:hover {
+    text-decoration: underline;
+}
+.accordion {
+    max-width: 1000px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.accordion-button {
+    background-color: #efebeb;
+    border: 2px solid #ccc;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    font-size: 1.2em;
+    font-family: 'Lora', serif;
+    margin-top: 5px;    
+    box-sizing:border-box;
+    width: auto;
+    min-width: 400px;
+    padding: 20px;
+    
+}
+
+.accordion-content {
+    display: none;
+    padding: 20px;
+    border: 2px solid #ccc;
+    background-color: #efebeb;
+    margin-top: 10px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.accordion-icon {
+    font-size: 0.5em;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.accordion-button.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.contact {
+    text-align: center;
+    font-family: 'Lora', serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-top: auto;
+
+}
+@media (max-width: 1500px) {
+    nav ul {
+        padding-left: 20px;
+        padding-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+    }
+    .icon {
+    margin: 0 20px;
+}
+
+.accordion-button {
+    font-size: 1.1em;
+    padding: 18px;
+}
+
+}
+@media (max-width: 900px) {
+    nav ul {
+        padding-left: 10px;
+        padding-top: 8px;  
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 5px;
+        margin-bottom: 4px;  
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .contact {
+        margin-bottom: 100px;
+       
+    }
+         .pic1 {
+             width: 60%;
+             
+         }
+    
+         .icons-container {
+             flex-direction: column;
+             
+         }
+    
+         .icon {
+             margin: 15px 0;
+             
+         }
+    
+         .accordion-button {
+             font-size: 1em;
+             padding: 15px;
+         }
+}
+
+
+
+@media (max-width: 600px) {
+    nav ul {
+        padding-left: 10px;
+        padding-top: 8px;
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 5px;
+        margin-bottom: 2px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+
+    .pic1 img {
+        max-height: 400px;
+    }
+ 
+    .contact {
+        margin-bottom: 50px;
+       
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+         .pic1 {
+             width: 80%;
+             /* Further increase image size on very small screens */
+         }
+    
+         .accordion-button {
+             font-size: 0.9em;
+             /* Further decrease font size for accordion buttons */
+             padding: 12px;
+         }
+}

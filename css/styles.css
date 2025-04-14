@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3e8de;
+    position: relative;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a {
+    font-family: 'Lora', serif;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 190px;
+    padding-top: 50px;
+    text-align: left;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+.text_in_pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Lora', serif;
+    z-index: 1;
+   
+}
+.pic1 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.pic1 img {
+    width: 100%;
+    max-height: 530px;
+    object-fit: cover;
+}
+.pic2 {
+    position: relative;
+    margin-left: 250px;
+    top: -350px;
+}
+.pic2 img{
+    width: 30%;
+    max-height: 200px;
+}
+.pic2-bg {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.pic2-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+  
+}
+.logo img {
+    height: 60px;
+}
+
+
+.text1 {
+    padding: 210px 60px;
+    margin-top:30px;
+    padding-right: 130px;
+    margin-left: 800px;
+    line-height: 2;
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    max-width: 800px;
+    font-family: 'Lora', serif;
+    position: relative;
+}
+
+.contact {
+    position: absolute;
+    bottom: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 20px;
+    font-family: 'Lora', serif;
+    margin: 20px auto;
+       
+}
+.contact a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight:lighter;
+}
+.contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    bottom: 10px;
+    width: 100%;
+    margin-top: auto;
+    margin-top: auto;
+       
+}
+/* For screens up to 1500px wide */
+@media (max-width: 1500px) {
+    nav ul {
+        padding-left: 20px;
+        /* Adjusted for consistency */
+        padding-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+        /* Adjusted for consistency */
+    }
+
+    .pic2 {
+        margin-left: 210px;
+        margin-top: 80px;
+        top: -370px;
+        max-height: 200px;
+        width: 100%;
+    }
+    .text1 {
+        padding: 150px 20px;
+        margin-top: 80px;
+        margin-left: 595px;
+        font-size: 1.2em;
+       
+    }
+}
+
+
+@media (max-width: 900px) {
+    nav ul {
+        padding-left: 10px;
+        padding-top: 10px;
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .pic2 {
+        margin-left: 135px;
+        margin-top: 80px;
+        top: -300px;
+        
+    }
+
+    .text1 {
+        margin-top: 80px;
+        padding: 100px 10px;
+        margin-left: 395px;
+        font-size: 1em;
+    }
+
+    .contact {
+        bottom: 100px;
+       
+    }
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        padding-left: 10px;
+        padding-top: 8px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 5px;
+        margin-bottom: 2px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+
+    .pic1 img {
+        max-height: 400px;
+    }
+
+    .pic2 img {
+        width: 40%;
+        max-height: 130px;
+        margin-top:100px ;
+        margin-right: 230px;
+        margin-left: 35px;
+        
+    }
+
+    .text1 {
+        padding: 90px 10px;   
+        margin-left: 250px;
+        font-size: 0.6em;
+    }
+
+    .contact {
+        bottom: 50px;
+        font-size: 0.9em;
+    }
+    footer {
+        font-size: 0.9em;
+    
+    }
+    .text_in_pic {
+            font-size: 3em;
+    
+    }
+}
+
+
+
