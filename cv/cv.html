@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download CV | Niusha</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Minimal styles for the download button */
+        .download-container {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .download-btn {
+            padding: 15px 30px;
+            background-color: #f3e8de;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-family: 'Lora', serif;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            background-color: #000;
+            color: #f3e8de;
+        }
+
+        /* Dark mode support */
+        body.dark-mode .download-btn {
+            background-color: #1a1a1a;
+            color: #f3e8de;
+            border-color: #f3e8de;
+        }
+
+        body.dark-mode .download-btn:hover {
+            background-color: #f3e8de;
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about/about.html">About</a></li>
+                <li><a href="../art/art.html">Art</a></li>
+                <li><a href="../photos/photos.html">Photos</a></li>
+                <li><a href="../projects/projects.html">Projects</a></li>
+                <li><a href="../cv/cv.html" class="active">CV</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img id="logo" src="../imgs/anar.webp" alt="Niusha's Logo" loading="lazy">
+        </div>
+    </header>
+
+    <!-- Only a download button (no content) -->
+    <div class="download-container fade-in">
+        <a href="../downloads/CV.pdf" download="Niusha_CV.pdf" class="download-btn">
+            Download My CV (PDF)
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 25 July 2024, Niusha.</p>
+        <button id="darkModeToggle" aria-label="Toggle dark mode">🌓</button>
+    </footer>
+
+    <!-- Inline JS for animations/dark mode -->
+    <script>
+        // Simple fade-in animation
+        document.addEventListener("DOMContentLoaded", () => {
+            const fadeEl = document.querySelector('.fade-in');
+            if (fadeEl) {
+                fadeEl.style.opacity = '0';
+                setTimeout(() => {
+                    fadeEl.style.transition = 'opacity 0.6s ease-out';
+                    fadeEl.style.opacity = '1';
+                }, 100);
+            }
+
+            // Dark mode toggle
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
