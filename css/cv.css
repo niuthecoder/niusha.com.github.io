@@ -1,0 +1,215 @@
+/* --- General Body & Header --- */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    background-color: #f3e8de;
+    overflow-x: hidden;
+}
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(-45deg, #f3e8de, #ffe6d0, #f3e8de, #ffd5b3);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+}
+header {
+    position: relative;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(-45deg, #f3e8de, #ffe6d0, #f3e8de, #ffd5b3);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+}
+a {
+    font-family: 'Lora', serif;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 190px;
+    padding-top: 50px;
+    text-align: left;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.h1_photo {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+}
+
+.logo img {
+    height: 60px;
+}
+/* --- Hero Section --- */
+.cv-hero {
+    text-align: center;
+    padding: 80px 20px 50px 20px;
+}
+
+.cv-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cv-hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.download-btn {
+    padding: 15px 35px;
+    background-color: #f3e8de;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #000;
+    color: #f3e8de;
+}
+
+/* --- CV Highlights Cards --- */
+.cv-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 40px 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cv-card {
+    background-color: #fff3e6;
+    padding: 25px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cv-card h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.cv-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 15px 0;
+}
+
+#darkModeToggle {
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1.2em;
+}
+
+/* --- Dark Mode --- */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f3e8de;
+}
+
+body.dark-mode .cv-card {
+    background-color: #333;
+    color: #f3e8de;
+}
+
+body.dark-mode .download-btn {
+    background-color: #1a1a1a;
+    color: #f3e8de;
+    border-color: #f3e8de;
+}
+
+body.dark-mode .download-btn:hover {
+    background-color: #f3e8de;
+    color: #1a1a1a;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .cv-highlights {
+        flex-direction: column;
+        align-items: center;
+    }
+}

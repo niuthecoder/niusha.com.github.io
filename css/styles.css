@@ -1,3 +1,6 @@
+/* ========================
+   BODY & BACKGROUND
+======================== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,8 +10,28 @@ body {
     min-height: 100vh;
     flex-direction: column;
     overflow-x: hidden;
+    background: linear-gradient(-45deg, #f3e8de, #ffe6d0, #f3e8de, #ffd5b3);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
 }
 
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ========================
+   HEADER & NAVIGATION
+======================== */
 header {
     position: relative;
     color: rgb(0, 0, 0);
@@ -17,15 +40,22 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-a {
-    font-family: 'Lora', serif;
+
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 70px;
 }
+
+.logo img {
+    height: 60px;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
     padding-left: 190px;
     padding-top: 50px;
-    text-align: left;
     display: flex;
 }
 
@@ -35,46 +65,93 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: 'Lora', serif;
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
 }
+
 nav ul li a:hover {
     text-decoration: underline;
 }
-.text_in_pic {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 4em;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Lora', serif;
-    z-index: 1;
-   
-}
+
+/* ========================
+   PIC1 SECTION
+======================== */
 .pic1 {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto;
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 30px;
 }
+
 .pic1 img {
     width: 100%;
     max-height: 530px;
     object-fit: cover;
 }
+
+.pic1-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 750px;
+    gap: 90px;
+}
+
+.pic1-left .pic1-portrait {
+    width: 400px;
+    height: 420px;
+    border-radius: 10%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.pic1-left .pic1-portrait:hover {
+    transform: scale(1.05);
+}
+
+.pic1-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.pic1-right p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+    white-space: normal;
+    margin: 0;
+    line-height: 1.2;
+    font-family: Arial, sans-serif;
+}
+
+/* ========================
+   PIC2 SECTION
+======================== */
 .pic2 {
     position: relative;
     margin-left: 250px;
     top: -350px;
 }
-.pic2 img{
+
+.pic2 img {
     width: 30%;
     max-height: 200px;
 }
+
 .pic2-bg {
     width: 100%;
     max-height: 200px;
@@ -91,20 +168,12 @@ nav ul li a:hover {
     pointer-events: none;
 }
 
-.logo {
-    position: absolute;
-    top: 30px;
-    right: 70px;
-  
-}
-.logo img {
-    height: 60px;
-}
-
-
+/* ========================
+   TEXT1 SECTION
+======================== */
 .text1 {
     padding: 210px 60px;
-    margin-top:30px;
+    margin-top: 30px;
     padding-right: 130px;
     margin-left: 800px;
     line-height: 2;
@@ -117,6 +186,98 @@ nav ul li a:hover {
     position: relative;
 }
 
+/* ========================
+   SERVICES / CTA SECTION
+======================== */
+.cta-section {
+    padding-top: 20px;
+    position: relative;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+/* Background image fills the width */
+.cta-section .pic1-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.25;
+    /* keep text readable */
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Lora', serif;
+    color: #222;
+}
+
+/* Stack services vertically */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 80px;
+    justify-items: stretch;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: left;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #ffb78a;
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #ff9f66;
+}
+/* ========================
+   CONTACT SECTION
+======================== */
 .contact {
     position: absolute;
     bottom: 180px;
@@ -126,27 +287,32 @@ nav ul li a:hover {
     padding: 20px;
     font-family: 'Lora', serif;
     margin: 20px auto;
-       
 }
+
 .contact a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-weight:lighter;
+    font-weight: lighter;
 }
+
 .contact a:hover {
     text-decoration: underline;
 }
 
+/* ========================
+   FOOTER
+======================== */
 footer {
     color: rgb(0, 0, 0);
     text-align: center;
     bottom: 10px;
     width: 100%;
     margin-top: auto;
-    margin-top: auto;
-       
 }
-/* NEW: Dark mode (optional) */
+
+/* ========================
+   DARK MODE
+======================== */
 body.dark-mode {
     background-color: #1a1a1a;
     color: #f3e8de;
@@ -158,7 +324,9 @@ body.dark-mode nav ul li a {
     color: #f3e8de !important;
 }
 
-/* NEW: Animation classes */
+/* ========================
+   ANIMATIONS
+======================== */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -170,7 +338,9 @@ body.dark-mode nav ul li a {
     transform: translateY(0);
 }
 
-/* NEW: Dark mode toggle button */
+/* ========================
+   DARK MODE TOGGLE BUTTON
+======================== */
 #darkModeToggle {
     background: transparent;
     border: none;
@@ -178,11 +348,13 @@ body.dark-mode nav ul li a {
     font-size: 1.2em;
     margin-left: 10px;
 }
-/* For screens up to 1500px wide */
+
+/* ========================
+   RESPONSIVE
+======================== */
 @media (max-width: 1500px) {
     nav ul {
         padding-left: 20px;
-        /* Adjusted for consistency */
         padding-top: 20px;
         display: flex;
         justify-content: flex-start;
@@ -190,7 +362,6 @@ body.dark-mode nav ul li a {
 
     nav ul li {
         margin-right: 20px;
-        /* Adjusted for consistency */
     }
 
     .pic2 {
@@ -200,15 +371,14 @@ body.dark-mode nav ul li a {
         max-height: 200px;
         width: 100%;
     }
+
     .text1 {
         padding: 150px 20px;
         margin-top: 80px;
         margin-left: 595px;
         font-size: 1.2em;
-       
     }
 }
-
 
 @media (max-width: 900px) {
     nav ul {
@@ -231,7 +401,6 @@ body.dark-mode nav ul li a {
         margin-left: 135px;
         margin-top: 80px;
         top: -300px;
-        
     }
 
     .text1 {
@@ -243,10 +412,8 @@ body.dark-mode nav ul li a {
 
     .contact {
         bottom: 100px;
-       
     }
 }
-
 
 @media (max-width: 600px) {
     nav ul {
@@ -271,14 +438,13 @@ body.dark-mode nav ul li a {
     .pic2 img {
         width: 40%;
         max-height: 130px;
-        margin-top:100px ;
+        margin-top: 100px;
         margin-right: 230px;
         margin-left: 35px;
-        
     }
 
     .text1 {
-        padding: 90px 10px;   
+        padding: 90px 10px;
         margin-left: 250px;
         font-size: 0.6em;
     }
@@ -287,15 +453,12 @@ body.dark-mode nav ul li a {
         bottom: 50px;
         font-size: 0.9em;
     }
+
     footer {
         font-size: 0.9em;
-    
     }
+
     .text_in_pic {
-            font-size: 3em;
-    
+        font-size: 3em;
     }
 }
-
-
-

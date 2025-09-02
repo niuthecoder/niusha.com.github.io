@@ -1,3 +1,5 @@
+/* --- General Body & Header --- */
+
 body {
     display: flex;
     flex-direction: column;
@@ -8,7 +10,25 @@ body {
     background-color: #f3e8de;
     overflow-x: hidden;
 }
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
 
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(-45deg, #f3e8de, #ffe6d0, #f3e8de, #ffd5b3);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+}
 header {
     position: relative;
     color: rgb(0, 0, 0);
@@ -18,8 +38,14 @@ header {
     align-items: center;
 }
 
-a {
-    font-family: 'Lora', serif;
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+}
+
+.logo img {
+    height: 60px;
 }
 
 nav ul {
@@ -27,7 +53,6 @@ nav ul {
     margin: 0;
     padding-left: 190px;
     padding-top: 50px;
-    text-align: left;
     display: flex;
 }
 
@@ -42,75 +67,74 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     text-decoration: underline;
 }
 
-.h1_Art {
-    padding: 20px;
+/* --- Page Title --- */
+main h1 {
+    text-align: center;
+    font-size: 48px;
+    /* big like other pages */
+    font-weight: 700;
+    padding: 40px 20px 20px 20px;
+    /* space from header */
+    margin: 0 auto;
+    max-width: 1200px;
+    color: #000;
+    line-height: 1.2;
+}
+
+/* --- Projects Grid --- */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 40px 50px 40px;
     max-width: 1200px;
     margin: 0 auto;
-    font-family: 'Lora', serif;
-    text-align: center;
-    font-size: 25px;
-    margin-bottom: 70px;
 }
 
-.logo {
-    position: absolute;
-    top: 30px;
-    right: 70px;
-
-}
-
-.logo img {
-    height: 60px;
-}
-
-.pic-gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+.project-card {
+    background: #fff3e6;
+    border-radius: 15px;
     padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.pic {
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
     width: 100%;
-    max-width: 600px;
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-.pic img {
-    width: 100%;
-    height: auto;
-    display: block;
+.project-card h2 {
+    margin: 15px 0 10px;
 }
 
-.text_in_pic {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 10px;
-    text-align: left;
+.project-card p {
+    font-size: 14px;
+    color: #555;
 }
 
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
 
-
-
-
-
-
+/* --- Contact --- */
 .contact {
     text-align: center;
-    font-family: 'Lora', serif;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
+    margin: 20px 0;
 }
 
 .contact a {
@@ -123,65 +147,42 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-
-
-
-
+/* --- Footer --- */
 footer {
     color: rgb(0, 0, 0);
     text-align: center;
-    bottom: 10px;
     width: 100%;
     padding: 10px;
     margin-top: auto;
-
 }
 
-@media (max-width: 1500px) {
-    nav ul {
-        padding-left: 20px;
-        padding-top: 20px;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    nav ul li {
-        margin-right: 20px;
-    }
-}
-
+/* --- Responsive --- */
 @media (max-width: 900px) {
     nav ul {
         padding-left: 10px;
-        padding-top: 8px;
+        padding-top: 10px;
         display: block;
     }
 
     nav ul li {
         display: block;
-        margin-right: 5px;
-        margin-bottom: 4px;
+        margin-bottom: 10px;
     }
 
-    nav ul li a {
-        font-size: 1em;
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        padding: 0 20px 40px 20px;
+        gap: 20px;
     }
 }
 
 @media (max-width: 600px) {
-    nav ul {
-        padding-left: 10px;
-        padding-top: 8px;
-        display: block;
-    }
-
-    nav ul li {
-        display: block;
-        margin-right: 5px;
-        margin-bottom: 2px;
-    }
-
     nav ul li a {
         font-size: 0.9em;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px 30px 15px;
     }
 }

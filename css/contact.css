@@ -1,3 +1,4 @@
+/* --- Body & Gradient Background --- */
 body {
     display: flex;
     flex-direction: column;
@@ -5,29 +6,57 @@ body {
     margin: 0;
     font-family: 'Lora', serif;
     line-height: 1.6;
-    background-color: #f3e8de;
+    background: linear-gradient(-45deg, #f3e8de, #ffe6d0, #f3e8de, #ffd5b3);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
     overflow-x: hidden;
 }
 
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* --- Header --- */
 header {
     position: relative;
-    color: rgb(0, 0, 0);
+    color: #000;
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-a {
-    font-family: 'Lora', serif;
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 70px;
 }
 
+.logo img {
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: rotate(10deg) scale(1.05);
+}
+
+/* --- Navigation --- */
 nav ul {
     list-style: none;
     margin: 0;
     padding-left: 190px;
     padding-top: 50px;
-    text-align: left;
     display: flex;
 }
 
@@ -37,84 +66,113 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(0, 0, 0);
+    color: #000;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     text-decoration: underline;
 }
 
+/* --- Page Title --- */
 .h1_about {
-    padding: 20px;
+    padding: 40px 20px 20px 20px;
     max-width: 1200px;
     margin: 0 auto;
     font-family: 'Lora', serif;
     text-align: center;
-    font-size: 25px;
-    margin-bottom: 70px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000;
 }
-.logo {
-    position: absolute;
-    top: 30px;
-    right: 70px;
 
-}
-.logo img {
-    height: 60px;
-}
-.contact-info{
-    text-align: center;
-    font-size: 1.2em;
+/* --- Contact Info --- */
+.contact-info {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
     text-align: left;
-}
-.contact-info p {
-    margin: 10px 0;
     font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-info p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-info p:hover {
+    transform: translateX(5px);
 }
 
 .contact-info a {
     color: #333333;
     text-decoration: none;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-info a:hover {
-    text-decoration: underline;
+    color: #007bff;
+    transform: translateX(5px);
 }
 
+/* --- Icon Before Links --- */
+.contact-info a::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+}
 
+.contact-info a[href^="mailto:"]::before {
+    background-image: url('../imgs/email.svg');
+}
 
+.contact-info a[href*="instagram"]::before {
+    background-image: url('../imgs/instagram.svg');
+}
 
+.contact-info a[href*="github"]::before {
+    background-image: url('../imgs/github.svg');
+}
 
+.contact-info a[href*="linkedin"]::before {
+    background-image: url('../imgs/linkedin.svg');
+}
 
+/* --- Scroll Fade-in --- */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Footer --- */
 footer {
-    color: rgb(0, 0, 0);
+    color: #000;
     text-align: center;
-    bottom: 10px;
-    width: 100%;
-    padding: 10px;
+    padding: 15px 0;
     margin-top: auto;
-
 }
 
-@media (max-width: 1500px) {
-    nav ul {
-        padding-left: 20px;
-        padding-top: 20px;
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    nav ul li {
-        margin-right: 20px;
-    }
-}
-
+/* --- Responsive --- */
 @media (max-width: 900px) {
     nav ul {
         padding-left: 10px;
@@ -131,38 +189,23 @@ footer {
     nav ul li a {
         font-size: 1em;
     }
+
+    .contact-info {
+        text-align: center;
+    }
 }
 
 @media (max-width: 600px) {
-    nav ul {
-        padding-left: 10px;
-        padding-top: 8px;
-        display: block;
-    }
-
-    nav ul li {
-        display: block;
-        margin-right: 5px;
-        margin-bottom: 2px;
-    }
-
     nav ul li a {
         font-size: 0.9em;
     }
+
+    .contact-info {
+        font-size: 1em;
+    }
+
+    .contact-info a::before {
+        width: 20px;
+        height: 20px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

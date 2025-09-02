@@ -8,23 +8,6 @@
     <link rel="stylesheet" href="../css/photos.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<script>
-    function filterPhotos(category) {
-            const items = document.querySelectorAll('.photo-item');
-            items.forEach(item => {
-                if (category === 'all') {
-                    item.style.display = 'block';
-                } else {
-                    if (item.classList.contains(category)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                }
-            });
-        }
-
-</script>
 
 <body>
     <header>
@@ -49,36 +32,53 @@
 
     <div class="filter-buttons">
         <button onclick="filterPhotos('all')">All</button>
-        <button onclick="filterPhotos('june')">june </button>
-        <button onclick="filterPhotos('iran')">iran</button>
-        <button onclick="filterPhotos('evening')">Evenings</button>
+        <button onclick="filterPhotos('bachelor-graduation')">Bachelor Graduation</button>
+        <button onclick="filterPhotos('random')">Random</button>
+        <button onclick="filterPhotos('motivation')">Motivation</button>
+        <button onclick="filterPhotos('working')">Working</button>
     </div>
 
     <div class="photo-gallery">
-        <div class="photo-item june">
-            <img src="morning1.jpg" alt="june Photo 1">
-            <div class="photo-description">june Photo 1</div>
+        <div class="photo-item bachelor-graduation">
+            <img src="../imgs/bachelor-photo1.jpeg" alt="Bachelor Graduation Photo 1">
+            <div class="overlay">Bachelor Graduation Photo 1</div>
         </div>
-        <div class="photo-item iran">
-            <img src="afternoon1.jpg" alt="iran Photo 1">
-            <div class="photo-description">iran Photo 1</div>
+        <div class="photo-item random">
+            <img src="../imgs/random1.jpeg" alt="Random Photo 1">
+            <div class="overlay">Random Photo 1</div>
         </div>
-        <div class="photo-item evening">
-            <img src="evening1.jpg" alt="Evenings Photo 1">
-            <div class="photo-description">Evenings Photo 1</div>
+        <div class="photo-item motivation">
+            <img src="../imgs/motivation1.jpeg" alt="Motivation Photo 1">
+            <div class="overlay">Motivation Photo 1</div>
         </div>
-        <div class="photo-item june">
-            <img src="morning2.jpg" alt="june Photo 2">
-            <div class="photo-description">june Photo 2</div>
+        <div class="photo-item working">
+            <img src="../imgs/working1.jpeg" alt="Working Photo 1">
+            <div class="overlay">Working Photo 1</div>
         </div>
-        
     </div>
+
+
 
     <footer>
         <p>&copy; 25 July 2024, Niusha.</p>
     </footer>
 
-    <script src="photos.js"></script>
+    <script>
+        function filterPhotos(category) {
+            const items = document.querySelectorAll('.photo-item');
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.classList.contains(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -5,51 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download CV | Niusha</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/cv.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Minimal styles for the download button */
-        .download-container {
-            height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .download-btn {
-            padding: 15px 30px;
-            background-color: #f3e8de;
-            color: #000;
-            border: 1px solid #000;
-            border-radius: 5px;
-            font-family: 'Lora', serif;
-            font-size: 1.2em;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .download-btn:hover {
-            background-color: #000;
-            color: #f3e8de;
-        }
-
-        /* Dark mode support */
-        body.dark-mode .download-btn {
-            background-color: #1a1a1a;
-            color: #f3e8de;
-            border-color: #f3e8de;
-        }
-
-        body.dark-mode .download-btn:hover {
-            background-color: #f3e8de;
-            color: #1a1a1a;
-        }
-    </style>
 </head>
 
 <body>
@@ -65,42 +22,61 @@
             </ul>
         </nav>
         <div class="logo">
-            <img id="logo" src="../imgs/anar.webp" alt="Niusha's Logo" loading="lazy">
+            <img src="../imgs/anar.webp" alt="Niusha's Logo" loading="lazy">
         </div>
     </header>
 
-    <!-- Only a download button (no content) -->
-    <div class="download-container fade-in">
-        <a href="../downloads/CV.pdf" download="Niusha_CV.pdf" class="download-btn">
-            Download My CV (PDF)
-        </a>
-    </div>
+    <main>
+        <section class="cv-hero fade-in">
+            <h1>My CV</h1>
+            <p>Explore my skills, experience, and education. Download the full PDF to learn more.</p>
+            <a href="../downloads/CV.pdf" download="Niusha_CV.pdf" class="download-btn">Download CV (PDF)</a>
+        </section>
+
+        <section class="cv-highlights">
+            <div class="cv-card">
+                <h2>Education</h2>
+                <p>Bachelor of Computer Engineering | University Antalya Bilim</p>
+                <p>Master of Computer Engineering (AI/ML) | University Antalya Bilim</p>
+            </div>
+
+            <div class="cv-card">
+                <h2>Skills</h2>
+                <p>Python, Java, JavaScript, React, Node.js</p>
+                <p>AI & Machine Learning, Deep Learning, RPA</p>
+            </div>
+
+            <div class="cv-card">
+                <h2>Experience</h2>
+                <p>AI/ML Intern at Company A</p>
+                <p>Backend Developer Intern at Company B</p>
+                <p>Frontend Developer Intern at Company C</p>
+                <p>AI/ML Research Assistant at University Antalya Bilim</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 25 July 2024, Niusha.</p>
         <button id="darkModeToggle" aria-label="Toggle dark mode">🌓</button>
     </footer>
 
-    <!-- Inline JS for animations/dark mode -->
     <script>
-        // Simple fade-in animation
         document.addEventListener("DOMContentLoaded", () => {
-            const fadeEl = document.querySelector('.fade-in');
-            if (fadeEl) {
-                fadeEl.style.opacity = '0';
+            // Fade-in animation
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '0';
                 setTimeout(() => {
-                    fadeEl.style.transition = 'opacity 0.6s ease-out';
-                    fadeEl.style.opacity = '1';
+                    el.style.transition = 'opacity 0.6s ease-out';
+                    el.style.opacity = '1';
                 }, 100);
-            }
+            });
 
             // Dark mode toggle
             const darkModeToggle = document.getElementById('darkModeToggle');
-            if (darkModeToggle) {
-                darkModeToggle.addEventListener('click', () => {
-                    document.body.classList.toggle('dark-mode');
-                });
-            }
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+            });
         });
     </script>
 </body>
