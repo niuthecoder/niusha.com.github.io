@@ -50,11 +50,7 @@ header {
     }
 }
 
-body {
-    background: linear-gradient(-45deg, #f3e8de, #ffe6d0, #f3e8de, #ffd5b3);
-    background-size: 400% 400%;
-    animation: gradientShift 20s ease infinite;
-}
+
 a {
     font-family: 'Lora', serif;
 }

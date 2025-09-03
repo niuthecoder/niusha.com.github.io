@@ -64,7 +64,11 @@ nav ul li a:hover,
 nav ul li a.active {
     text-decoration: underline;
 }
-
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 70px;
+}
 .logo img {
     height: 60px;
 }
