@@ -1,27 +1,16 @@
 
+/* --- General Body & Header --- */
 body {
-    font-family: 'Lora', serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(-45deg, #f3e8de, #ffe6d0, #f3e8de, #ffd5b3);
-    background-size: 400% 400%;
-    animation: gradientShift 20s ease infinite;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-/* Fade-in animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    margin: 0;
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    background-color: #f3e8de;
+    overflow-x: hidden;
 }
 
-.fade-in.active {
-    opacity: 1;
-    transform: translateY(0);
-}
 @keyframes gradientShift {
     0% {
         background-position: 0% 50%;
@@ -36,43 +25,83 @@ body {
     }
 }
 
-/* Header & Navigation */
+body {
+    background: linear-gradient(-45deg, #f3e8de, #ffe6d0, #f3e8de, #ffd5b3);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+}
+
 header {
     position: relative;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    color: #000;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+a {
+    font-family: 'Lora', serif;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
     padding-left: 190px;
+    padding-top: 50px;
+    text-align: left;
     display: flex;
-    gap: 50px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 50px;
 }
 
 nav ul li a {
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
-    color: #000;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+nav ul li a:hover {
     text-decoration: underline;
 }
+
+.h1_photo {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
 .logo {
     position: absolute;
     top: 30px;
     right: 70px;
 }
+
 .logo img {
     height: 60px;
 }
-
 /* Title section */
 .h1_about {
     font-size: 1.5em;

@@ -1,50 +1,110 @@
+/* --- General Body & Header --- */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
     font-family: 'Lora', serif;
+    line-height: 1.6;
     background-color: #f3e8de;
     overflow-x: hidden;
 }
 
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(-45deg, #f3e8de, #ffe6d0, #f3e8de, #ffd5b3);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+}
+
 header {
+    position: relative;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+a {
+    font-family: 'Lora', serif;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
     margin: 0;
     padding-left: 190px;
+    padding-top: 50px;
+    text-align: left;
+    display: flex;
 }
 
 nav ul li {
+    display: inline;
     margin-right: 50px;
 }
 
 nav ul li a {
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
-    color: #000;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+nav ul li a:hover {
     text-decoration: underline;
+}
+
+.h1_photo {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 70px;
 }
 
 .logo img {
     height: 60px;
 }
-
 .h1_Art {
     text-align: center;
     font-size: 2rem;
-    margin: 40px 0;
+    margin: 0px 0;
 }
 
 /* Carousel */
