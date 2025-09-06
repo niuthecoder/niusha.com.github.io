@@ -1,0 +1,73 @@
+ @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+        body {
+            background: linear-gradient(135deg, #fceabb, #f8b500);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Fredoka One', cursive;
+            user-select: none;
+            color: #444;
+        }
+
+        #game-container {
+            background: #fff4e6;
+            padding: 25px 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(255, 187, 153, 0.6);
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            flex-direction: row;
+        }
+
+        #score {
+            position: sta;
+            top: 12px;
+            right: 28px;
+            font-size: 24px;
+            color: #ff6f91;
+            text-shadow: 1px 1px 2px #ff9a9e;
+        }
+
+        canvas {
+            background: #fceabb;
+            border-radius: 12px;
+            box-shadow:
+                0 3px 6px rgba(255, 111, 145, 0.5),
+                inset 0 0 20px #ff9a9e;
+        }
+
+        #next-container {
+            text-align: center;
+            color: #ff6f91;
+        }
+
+        #next-container div:first-child {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 12px;
+            text-shadow: 1px 1px 3px #ff9a9e;
+        }
+
+        #next {
+            background: #f0a2a2;
+            width: 100px !important;
+            height: 100px !important;
+            border-radius: 15px;
+            box-shadow:
+                0 3px 6px rgba(255, 111, 145, 0.6),
+                inset 0 0 25px #ff9a9e;
+        }
+
+        #instructions {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            color: #ff6f9144;
+            font-size: 14px;
+            max-width: 300px;
+        }
+    </style>
