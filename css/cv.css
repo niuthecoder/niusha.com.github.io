@@ -130,40 +130,7 @@ nav ul li a:hover {
     color: #f3e8de;
 }
 
-/* --- CV Highlights Cards --- */
-.cv-highlights {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px 40px 60px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.cv-card {
-    background-color: #fff3e6;
-    padding: 25px;
-    border-radius: 15px;
-    width: 280px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.cv-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.cv-card h2 {
-    margin-bottom: 12px;
-    font-size: 22px;
-}
-
-.cv-card p {
-    font-size: 14px;
-    margin: 5px 0;
-}
 
 /* --- Footer --- */
 footer {
